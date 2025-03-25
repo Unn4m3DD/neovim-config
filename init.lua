@@ -1,7 +1,8 @@
+vim.g.mapleader = " "
 require("config.lazy")
 vim.keymap.set("v", "<space>x", ":lua<CR>")
-vim.keymap.set("i", "<C-s>", "<C-o>:w<CR>", {noremap = true, silent = true })
-vim.keymap.set({ "n", "v" }, "<C-s>", ":w<CR>", {noremap = true, silent = true })
+vim.keymap.set("i", "<C-s>", "<C-o>:w<CR>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<C-s>", ":w<CR>", { noremap = true, silent = true })
 vim.opt.shiftwidth = 2
 vim.opt.number = true
 vim.relativenumber = true
@@ -15,3 +16,5 @@ vim.diagnostic.config({
 	update_in_insert = false,
 })
 vim.opt.tabstop = 2
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+require("quickfix")
